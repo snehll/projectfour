@@ -6,11 +6,9 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import ResponsiveAppBar from "@/components/navbar";
 
 import CustomThemeProvider from "./theme-provider";
 import { Box, useTheme } from "@mui/material";
-import Footer from "@/components/footer";
 import ThemeWrapper from "@/components/wrapper";
 
 const geistSans = Geist({
@@ -23,10 +21,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Argenta 3D Teknoloji",
-  description: "Your trusted partner for industrial equipment and spare parts.",
-};
+// export const metadata = {
+//   title: "ATLAS TRADE ",
+//   description: "Your trusted partner for industrial equipment and spare parts.",
+// };
 
 export default function RootLayout({
   children,
@@ -35,12 +33,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>ATLAS TRADE </title>
+        <meta
+          name="description"
+          content="Specialization in the supply of spare parts for industrial equipment such as generators, turbines, for production and resale. Procurement includes turnkey delivery and selection per specifications."
+        />
+        <meta
+          name="keywords"
+          content="spare parts, industrial equipment, generators, turbines, procurement"
+        />
+        <meta name="author" content="ATLAS TRADE " />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="icon"
+          href={
+            "https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg"
+          }
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <CustomThemeProvider>
           <AppRouterCacheProvider>
             <ThemeWrapper>
-              <ResponsiveAppBar />
+              {/* <ResponsiveAppBar /> */}
               <Box
                 sx={{
                   minHeight: "100vh",
@@ -49,7 +66,7 @@ export default function RootLayout({
                 }}>
                 {children}
               </Box>
-              <Footer />
+              {/* <Footer /> */}
             </ThemeWrapper>
           </AppRouterCacheProvider>
         </CustomThemeProvider>
