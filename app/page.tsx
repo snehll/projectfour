@@ -1,4 +1,4 @@
-use client";
+"use client";
 import React, { useState } from "react";
 import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
